@@ -1,0 +1,35 @@
+.title
+{
+    font-size: 3.5em;
+    color: white;
+}
+#top
+{
+    display: inline-block;
+}
+#background
+{
+    height: 200px;
+    background-image: url('../images/background.jpg');
+    background-position: center;
+    background-position-y: -200px;
+}
+.nav-link
+{
+    color: white;
+}
+.social_btn
+{
+    position: relative;
+    bottom: 0;
+    color: white;    
+}
+.social_btn_dark
+{
+    color: black;
+}
+.return_button
+{
+    color: #343a40;
+    margin-bottom: 25px;
+}
