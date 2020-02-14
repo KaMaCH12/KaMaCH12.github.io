@@ -33,3 +33,43 @@
     color: #343a40;
     margin-bottom: 25px;
 }
+@media (max-device-aspect-ratio: 5/8){
+    header
+    {
+	position: sticky;
+	top: 0;
+	z-index: 1020;
+    }
+    h1,h2,h3,h4
+    {
+	font-size: 200%;
+    }
+    .navbar-toggler
+    {
+	font-size: 130%;
+    }
+    .title
+    {
+	font-size: 200%;
+    }
+    .container
+    {
+	padding-left: 5;
+	padding-right: 5;
+	margin-right: 0;
+	margin-left: 0;
+	max-width: 100%;
+	font-size: 250%;
+    }
+    .container-fluid
+    {
+	padding-left: 0;
+	padding-right: 0;
+	margin-right: 0;
+	margin-left: 0;
+    }
+    .return_button
+    {
+	display: none;
+    }
+}
