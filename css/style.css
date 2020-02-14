@@ -1,8 +1,8 @@
-a.anchor
+:target
 {
     display: block;
     position: relative;
-    top: -250px;
+    top: -136px;
     visibility: hidden;
 }
 .title
