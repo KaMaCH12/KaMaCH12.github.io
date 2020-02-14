@@ -2,6 +2,12 @@
 {
     font-size: 3.5em;
     color: white;
+    text-decoration: none;
+}
+.title:hover
+{
+    text-decoration: none;
+    color: white;
 }
 #top
 {
