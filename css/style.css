@@ -5,6 +5,10 @@
     top: -136px;
     visibility: hidden;
 }
+a:hover
+{
+    text-decoration: none;
+}
 .title
 {
     font-size: 3.5em;
@@ -40,7 +44,6 @@
 {
     position: relative;
     bottom: 0;
-    color: white;    
 }
 .social_btn_dark
 {
@@ -51,6 +54,28 @@
     color: #343a40;
     margin-bottom: 25px;
 }
+/* fa icons colors */
+.fa:hover
+{
+    color: black;
+}
+.fa-facebook
+{
+    color: #3b5998;
+}
+.fa-snapchat
+{
+    color: #fffc00;
+}
+.fa-instagram
+{
+    color: #e1306c;
+}
+.fa-github
+{
+    color: white;
+}
+/* mobile css */
 @media (max-device-aspect-ratio: 5/8){
     header
     {
