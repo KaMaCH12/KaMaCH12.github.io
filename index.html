@@ -147,13 +147,16 @@
 	<script>
 	$(document).scroll(function()
 	{
-	    if ($(document).scrollTop() < 160)
+	    if(($(window).height()/$(window).width())<(8/5))
 	    {
-		$(".return_button").slideUp();
-	    }
-	    else
-	    {
-		$(".return_button").slideDown();
+		if($(document).scrollTop() < 160)
+		{
+		    $(".return_button").slideUp();
+		}
+		else
+		{
+		    $(".return_button").slideDown();
+		}
 	    }
 	});
 	</script>
