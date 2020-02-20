@@ -1,10 +1,3 @@
-:target
-{
-    display: block;
-    position: relative;
-    top: -136px;
-    visibility: hidden;
-}
 a:hover
 {
     text-decoration: none;
@@ -51,8 +44,9 @@ a:hover
 }
 .return_button
 {
+    display: none;
+    position: relative;
     color: #343a40;
-    margin-bottom: 25px;
 }
 /* fa icons colors */
 .fa:hover
@@ -77,6 +71,13 @@ a:hover
 }
 /* mobile css */
 @media (max-device-aspect-ratio: 5/8){
+    :target
+    {
+	display: block;
+	position: relative;
+	top: -136px;
+	visibility: hidden;
+    }
     header
     {
 	position: sticky;
