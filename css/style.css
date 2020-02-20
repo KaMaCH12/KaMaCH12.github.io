@@ -45,7 +45,10 @@ a:hover
 .return_button
 {
     display: none;
+    font-size: 3em;
+    opacity: 0.5;
     position: relative;
+    margin-bottom: 25px;
     color: #343a40;
 }
 /* fa icons colors */
