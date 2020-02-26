@@ -49,6 +49,7 @@ a:hover
     opacity: 0.5;
     position: relative;
     margin-bottom: 25px;
+    left: 10px;
     color: #343a40;
 }
 /* fa icons colors */
