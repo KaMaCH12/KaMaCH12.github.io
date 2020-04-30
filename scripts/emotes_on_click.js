@@ -21,5 +21,5 @@ function emote()
     ],{
         duration: 2000,
         iterations: 1
-    }).finished.then(() => {document.body.removeChild(emote_element)});
+    }).onfinish = function(){document.body.removeChild(emote_element)};
 }
