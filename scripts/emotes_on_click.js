@@ -13,7 +13,7 @@ function emote()
     emote_element.className="fas fa-dollar-sign";
     var posx=(Math.random()*document.body.clientWidth-fontsize*1.2).toFixed(0);
     var posy=window.scrollY;
-    var rot=0;
+    var rot=Math.random()*360;
     emote_element.style.left=posx.toString()+"px";
     emote_element.style.top=posy.toString()+"px";
     document.body.appendChild(emote_element);
