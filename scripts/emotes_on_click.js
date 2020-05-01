@@ -1,25 +1,32 @@
 document.body.onclick = emote;
 function emote()
 {
-    console.log("eldo");
     var emote_element=document.createElement("a");
     emote_element.style.position="absolute";
-    emote_element.style.fontSize="3rem";
+    emote_element.style.fontSize=(document.body.clientWidth/20).toFixed(0).toString()+"px";
     emote_element.style.color="dark";
     emote_element.className="fa fa-linux";
-    emote_element.style.left=((Math.random()*document.body.clientWidth).toFixed(0)-emote_element.clientWidth).toString()+"px";
-    emote_element.style.top="0px";
+    var posx=(Math.random()*document.body.clientWidth-emote_element.clientWidth*2).toFixed(0);
+    var posy=window.scrollY;
+    var rot=0;
+    emote_element.style.left=posx.toString()+"px";
+    emote_element.style.top=posy.toString()+"px";
     document.body.appendChild(emote_element);
 
-    emote_element.animate([
-        { 
-            transform: 'translateY(' + window.scrollY + 'px) rotate(0deg)'
-        },
-        { 
-            transform: 'translateY(' + (window.scrollY+window.innerHeight) + 'px) rotate(360deg)'
+    var anim=setInterval(frame,20);
+    function frame()
+    {
+        if(posy>document.body.clientHeight-emote_element.clientHeight)
+        {
+            document.body.removeChild(emote_element);
+            clearInterval(anim);       
         }
-    ],{
-        duration: 2000,
-        iterations: 1
-    }).onfinish = function(){document.body.removeChild(emote_element)};
+        else
+        {
+            rot+=2;
+            posy+=20;
+            emote_element.style.top=posy.toString()+"px";
+            emote_element.style.transform="rotate("+rot.toString()+"deg)";
+        }
+    }    
 }
