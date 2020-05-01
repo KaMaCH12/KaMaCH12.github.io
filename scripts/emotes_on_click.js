@@ -3,17 +3,18 @@ function emote()
 {
     var emote_element=document.createElement("a");
     emote_element.style.position="absolute";
-    emote_element.style.fontSize=(document.body.clientWidth/20).toFixed(0).toString()+"px";
+    var fontsize=(document.body.clientWidth/20).toFixed(0);
+    emote_element.style.fontSize=fontsize.toString()+"px";
     emote_element.style.color="dark";
     emote_element.className="fa fa-linux";
-    var posx=(Math.random()*document.body.clientWidth-emote_element.clientWidth*2).toFixed(0);
+    var posx=(Math.random()*document.body.clientWidth-fontsize*1.2).toFixed(0);
     var posy=window.scrollY;
     var rot=0;
     emote_element.style.left=posx.toString()+"px";
     emote_element.style.top=posy.toString()+"px";
     document.body.appendChild(emote_element);
 
-    var anim=setInterval(frame,20);
+    var anim=setInterval(frame,5);
     function frame()
     {
         if(posy>document.body.clientHeight-emote_element.clientHeight)
@@ -23,8 +24,8 @@ function emote()
         }
         else
         {
-            rot+=2;
-            posy+=20;
+            rot+=1;
+            posy+=5;
             emote_element.style.top=posy.toString()+"px";
             emote_element.style.transform="rotate("+rot.toString()+"deg)";
         }
