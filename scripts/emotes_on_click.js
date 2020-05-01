@@ -1,12 +1,16 @@
 document.body.onclick = emote;
+var num_emotes=0;
+
 function emote()
 {
+    if(num_emotes>10)return;
+    num_emotes++;
     var emote_element=document.createElement("a");
     emote_element.style.position="absolute";
     var fontsize=(document.body.clientWidth/20).toFixed(0);
     emote_element.style.fontSize=fontsize.toString()+"px";
-    emote_element.style.color="dark";
-    emote_element.className="fa fa-linux";
+    emote_element.style.color="green";
+    emote_element.className="fas fa-dollar-sign";
     var posx=(Math.random()*document.body.clientWidth-fontsize*1.2).toFixed(0);
     var posy=window.scrollY;
     var rot=0;
@@ -20,6 +24,7 @@ function emote()
         if(posy>document.body.clientHeight-emote_element.clientHeight)
         {
             document.body.removeChild(emote_element);
+            num_emotes--;
             clearInterval(anim);       
         }
         else
