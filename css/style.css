@@ -122,6 +122,6 @@ a:hover
     }
     .return_button
     {
-	display: none;
+	display: none !important;
     }
 }
