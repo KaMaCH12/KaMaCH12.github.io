@@ -7,10 +7,11 @@ function emote()
     num_emotes++;
     var emote_element=document.createElement("a");
     emote_element.style.position="absolute";
-    var fontsize=(document.body.clientWidth/20).toFixed(0);
+    if(document.body.clientWidth/document.body.clientHeight>5/8) var fontsize=(document.body.clientWidth/20).toFixed(0);
+    else var fontsize=(document.body.clientWidth/10).toFixed(0);
     emote_element.style.fontSize=fontsize.toString()+"px";
     emote_element.style.color="green";
-    emote_element.className="fas fa-dollar-sign";
+    emote_element.className="emote fas fa-dollar-sign";
     var posx=(Math.random()*document.body.clientWidth-fontsize*1.2).toFixed(0);
     var posy=window.scrollY;
     var rot=Math.random()*360;
